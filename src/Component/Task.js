@@ -23,7 +23,7 @@ const Task = ({ Task }) => {
     checked: {},
   })((props) => <Checkbox color="default" {...props} />);
   const [state, setState] = React.useState({
-    checkedG: true,
+    checkedG: Task.isDone,
   });
   const handleChange = (event) => {
     setState({ ...state, [event.target.name]: event.target.checked });
